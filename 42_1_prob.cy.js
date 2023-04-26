@@ -1,28 +1,3 @@
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
-  }
-  getArea() {
-    return this.width * this.height;
-  }
-}
-
-class Square extends Rectangle {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-    this.sideLength = sideLength;
-  }
-  get sideLength() {
-    return this._sideLength;
-  }
-  set sideLength(value) {
-    this._sideLength = value;
-    this.width = value;
-    this.height = value;
-  }
-}
-
 describe('Shapes', () => {
   beforeEach(() => {
     cy.visit('http://127.0.0.1:5500/42_1_prob/index.html');
