@@ -1,26 +1,3 @@
-class Animal {
-  constructor(name, sound) {
-    this.name = name;
-    this.sound = sound;
-  }
-
-  makeSound() {
-    console.log(this.sound);
-  }
-}
-
-class Dog extends Animal {
-  constructor(name, sound, breed) {
-    super(name, sound);
-    this.breed = breed;
-  }
-
-  makeSound() {
-    super.makeSound();
-    console.log(`(${this.breed} breed)`);
-  }
-}
-
 describe('Animal and Dog classes', () => {
   it('creates an instance of Animal with the correct properties', () => {
     const animal = new Animal('Tiger', 'Roar');
