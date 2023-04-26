@@ -1,27 +1,4 @@
-class Person {
-    constructor(name, age) {
-      this.name = name;
-      this.age = age;
-    }
-  
-    getAgeInDays() {
-      return this.age * 365;
-    }
-  }
-  
-  class Student extends Person {
-    constructor(name, age, studentId) {
-      super(name, age);
-      this.studentId = studentId;
-    }
-  
-    getAgeInDays() {
-      console.log(`Student ID: ${this.studentId}`);
-      return super.getAgeInDays();
-    }
-  }
-  
-  describe('Person and Student classes', () => {
+describe('Person and Student classes', () => {
     it('creates an instance of Person with the correct properties', () => {
       const person = new Person('John', 25);
       expect(person.name).to.equal('John');
