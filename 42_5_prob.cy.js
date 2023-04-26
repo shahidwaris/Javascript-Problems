@@ -1,28 +1,3 @@
-class Shape {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-
-  moveTo(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
-class Circle extends Shape {
-  constructor(x, y, radius) {
-    super(x, y);
-    this.radius = radius;
-  }
-
-  moveTo(x, y) {
-    super.moveTo(x, y);
-    this.x += x;
-    this.y += y;
-  }
-}
-
 describe('Shape and Circle classes', () => {
   it('creates an instance of Shape with the correct properties', () => {
     const shape = new Shape(0, 0);
