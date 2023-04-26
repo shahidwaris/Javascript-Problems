@@ -1,33 +1,3 @@
-class BankAccount {
-  constructor(accountNumber, balance) {
-    this.accountNumber = accountNumber;
-    this.balance = balance;
-  }
-
-  deposit(amount) {
-    this.balance += amount;
-  }
-
-  withdraw(amount) {
-    this.balance -= amount;
-  }
-}
-
-class SavingsAccount extends BankAccount {
-  constructor(accountNumber, balance, interestRate) {
-    super(accountNumber, balance);
-    this.interestRate = interestRate;
-  }
-
-  withdraw(amount) {
-    if (this.balance - amount < 0) {
-      console.log("Insufficient balance");
-    } else {
-      super.withdraw(amount);
-    }
-  }
-}
-
 describe('BankAccount and SavingsAccount classes', () => {
   it('creates an instance of BankAccount with the correct properties', () => {
     const bankAccount = new BankAccount('123456', 1000);
